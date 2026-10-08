@@ -1,0 +1,56 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  fullName  String    @map("fullname") @db.VarChar(200)
+  email     String    @unique @db.VarChar(200)
+  password  String    @db.VarChar(200)
+  role      UserRole  @default(AGENT)
+  resetToken String?  @unique @map("reset_token")
+  tokenExpiry DateTime? @map("token_expiry")
+  passwordChangedAt DateTime? @map("password_changed_at")
+  createdAt DateTime  @default(now()) @map("created_at")
+  properties Property[]
+
+  @@map("users")
+}
+
+model Property {
+  id          Int      @id @default(autoincrement())
+  title       String   @db.VarChar(200)
+  type        String   @db.VarChar(60)
+  action      String   @db.VarChar(60)
+  price       Float
+  location    String   @db.VarChar(200)
+  description String
+  status      String   @default("ACTIVE") @db.VarChar(30)
+  agentId     Int      @map("agent_id")
+  agent       User     @relation(fields: [agentId], references: [id], onDelete: Cascade)
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  @@map("properties")
+}
+
+model ContactSubmission {
+  id        Int      @id @default(autoincrement())
+  name      String   @db.VarChar(200)
+  email     String   @db.VarChar(200)
+  subject   String   @db.VarChar(200)
+  message   String
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("contact")
+}
+
+enum UserRole {
+  AGENT
+  ADMIN
+  USER
+}

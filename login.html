@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign in | SamWealth Properties</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css" />
+  </head>
+  <body>
+    <main class="auth-page">
+      <section class="auth-card" aria-labelledby="login-title">
+        <a class="brand" href="htmlsur.html">SamWealth <span>Properties</span></a>
+        <h1 id="login-title">Welcome back</h1>
+        <p class="auth-intro">Sign in to manage your account or continue your property search.</p>
+        <div data-auth-status hidden role="alert"></div>
+        <form data-auth-form="login" novalidate>
+          <label for="accountType">I am signing in as</label>
+          <select id="accountType" name="accountType" class="form-style" required>
+            <option value="USER">Property seeker</option>
+            <option value="AGENT">Registered agent</option>
+            <option value="ADMIN">Administrator</option>
+          </select>
+          <label for="email">Email address</label>
+          <div class="form-group"><input type="email" id="email" name="email" placeholder="you@example.com" class="form-style" autocomplete="email" required /><i class="input-icon uil uil-at"></i></div>
+          <label for="password">Password</label>
+          <div class="form-group"><input type="password" name="password" class="form-style" placeholder="Enter your password" id="password" autocomplete="current-password" required /><i class="input-icon uil uil-lock-alt"></i></div>
+          <button type="submit" class="btn">Sign in</button>
+        </form>
+        <p class="auth-links"><a href="forgetpass.html">Forgot password?</a></p>
+        <a class="signup-button" href="user_signup.html">Create a user account</a>
+        <p class="account-note">Agents and administrators: use the sign-in form above. Agent accounts are created by an administrator.</p>
+      </section>
+    </main>
+    <script src="api.js"></script><script src="auth.js"></script>
+  </body>
+</html>

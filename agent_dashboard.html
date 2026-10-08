@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Agent dashboard | SamWealth</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body data-required-role="AGENT">
+    <div class="dashboard">
+      <aside class="sidebar">
+        <a class="brand" href="htmlsur.html"
+          >SamWealth <span>Properties</span></a
+        >
+        <nav>
+          <a href="agent_dashboard.html">Dashboard</a
+          ><a href="submitproperty.html">Add a listing</a
+          ><a href="feature.html">My listings</a
+          ><a href="profile.html">My profile</a
+          ><a href="htmlsur.html">View website</a
+          ><button type="button" data-sign-out>Sign out</button>
+        </nav>
+      </aside>
+      <main class="dashboard-main">
+        <div class="topbar">
+          <div>
+            <p class="eyebrow">Agent workspace</p>
+            <h1>Welcome back, <span data-user-name>Agent</span></h1>
+          </div>
+          <span class="user-name" data-user-name>Agent</span>
+        </div>
+        <section class="metrics">
+          <article class="metric">
+            <p>My listings</p>
+            <strong data-total-properties>—</strong>
+          </article>
+          <article class="metric">
+            <p>Enquiries</p>
+            <strong>0</strong>
+          </article>
+          <article class="metric">
+            <p>Profile status</p>
+            <strong>Ready</strong>
+          </article>
+        </section>
+        <section class="panel">
+          <h2>Start managing your listings</h2>
+          <p class="empty">
+            Create your first listing to begin receiving property enquiries
+            through SamWealth Properties.
+          </p>
+          <div class="actions">
+            <a class="action" href="submitproperty.html">Add property</a
+            ><a class="action secondary" href="feature.html"
+              >View my listings</a
+            >
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="api.js"></script><script src="dashboard.js"></script>
+  </body>
+</html>

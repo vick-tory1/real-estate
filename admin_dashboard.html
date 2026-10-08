@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Admin dashboard | SamWealth</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body data-required-role="ADMIN">
+    <div class="dashboard">
+      <aside class="sidebar">
+        <a class="brand" href="htmlsur.html"
+          >SamWealth <span>Properties</span></a
+        >
+        <nav>
+          <a href="admin_dashboard.html">Dashboard</a
+          ><a href="htmlsur.html">View website</a
+          ><button type="button" data-sign-out>Sign out</button>
+        </nav>
+      </aside>
+      <main class="dashboard-main">
+        <div class="topbar">
+          <div>
+            <p class="eyebrow">Administrator workspace</p>
+            <h1>Welcome, <span data-user-name>Administrator</span></h1>
+          </div>
+          <span class="user-name" data-user-name>Administrator</span>
+        </div>
+        <section class="metrics">
+          <article class="metric">
+            <p>Registered users</p>
+            <strong data-total-users>—</strong>
+          </article>
+          <article class="metric">
+            <p>Registered agents</p>
+            <strong data-total-agents>—</strong>
+          </article>
+          <article class="metric">
+            <p>Contact enquiries</p>
+            <strong data-total-contacts>—</strong>
+          </article>
+        </section>
+        <section class="panel">
+          <h2>Register an agent</h2>
+          <p class="empty">
+            Create agent accounts here. Agents then sign in from the main
+            sign-in page using the credentials you provide.
+          </p>
+          <form class="agent-form" data-agent-form novalidate>
+            <label for="agent-name">Full name</label
+            ><input
+              id="agent-name"
+              name="fullName"
+              required
+              autocomplete="name"
+              placeholder="Agent's full name"
+            /><label for="agent-email">Email address</label
+            ><input
+              id="agent-email"
+              name="email"
+              type="email"
+              required
+              autocomplete="email"
+              placeholder="agent@example.com"
+            /><label for="agent-password">Temporary password</label
+            ><input
+              id="agent-password"
+              name="password"
+              type="password"
+              minlength="8"
+              required
+              autocomplete="new-password"
+              placeholder="At least 8 characters"
+            /><button class="action" type="submit">Create agent account</button>
+            <p class="form-message" data-agent-message role="status"></p>
+          </form>
+        </section>
+        <section class="panel">
+          <h2>Platform overview</h2>
+          <p class="empty">
+            Use these totals to monitor account growth and incoming contact
+            requests. Only administrator accounts can open this dashboard.
+          </p>
+        </section>
+      </main>
+    </div>
+    <script src="api.js"></script><script src="dashboard.js"></script>
+  </body>
+</html>

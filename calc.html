@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="legacy-page.css" />
+    <title>EMI Calculator</title>
+  </head>
+  <body>
+    <main class="legacy-page">
+      <h1>EMI Calculator</h1>
+      <form id="emi-form">
+        <label
+          >Amount <input name="amount" type="number" min="0" required /></label
+        ><br /><label
+          >Months <input name="months" type="number" min="1" required /></label
+        ><br /><label
+          >Interest rate (%)
+          <input
+            name="interest"
+            type="number"
+            min="0"
+            step="0.01"
+            required /></label
+        ><br /><button>Calculate</button>
+      </form>
+      <output id="emi-result" aria-live="polite"></output>
+    </main>
+    <script>
+      document.querySelector("#emi-form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const d = Object.fromEntries(new FormData(e.currentTarget));
+        const i = (Number(d.amount) * Number(d.interest)) / 100,
+          p = Number(d.amount) + i,
+          m = p / Number(d.months);
+        document.querySelector("#emi-result").textContent =
+          `Total interest: $${i}; Total amount: $${p}; Pay per month: $${m}`;
+      });
+    </script>
+  </body>
+</html>

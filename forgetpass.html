@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="forgetpass.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Forgot Password</h1>
+        <p>Enter the email address registered to your account. We’ll send a one-hour password-reset link if the address is registered.</p>
+        <form id="forgotPasswordForm" novalidate>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <button type="submit" id="submitBtn">Send Reset Link</button>
+            <p id="message" class="hidden"></p>
+        </form>
+    </div>
+    <script src="api.js"></script><script src="forgetpass.js"></script>
+</body>
+</html>

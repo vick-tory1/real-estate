@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>User Sign Up | SamWealth Properties</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css" />
+  </head>
+  <body>
+    <main class="auth-page">
+      <section class="auth-card" aria-labelledby="signup-title">
+        <a class="brand" href="htmlsur.html">SamWealth <span>Properties</span></a>
+        <h1 id="signup-title">Create a user account</h1>
+        <p class="auth-intro">Create an account to explore properties and manage your enquiries. Agent and administrator accounts are created by an administrator and can only sign in.</p>
+        <div data-auth-status hidden role="alert"></div>
+        <form data-auth-form="register" novalidate>
+          <input type="hidden" name="accountType" value="USER">
+          <label for="fullName">Full name</label>
+          <div class="form-group"><input type="text" name="fullName" class="form-style" placeholder="Your full name" id="fullName" autocomplete="name" required><i class="input-icon uil uil-user"></i></div>
+          <label for="email">Email address</label>
+          <div class="form-group"><input type="email" name="email" class="form-style" placeholder="you@example.com" id="email" autocomplete="email" required><i class="input-icon uil uil-at"></i></div>
+          <label for="password">Password</label>
+          <div class="form-group"><input type="password" name="password" class="form-style" placeholder="At least 8 characters" id="password" autocomplete="new-password" minlength="8" required><i class="input-icon uil uil-lock-alt"></i></div>
+          <button type="submit" class="btn">Create user account</button>
+        </form>
+        <p class="auth-links">Already have an account? <a href="login.html">Sign in</a></p>
+      </section>
+    </main>
+    <script src="api.js"></script><script src="auth.js"></script>
+  </body>
+</html>

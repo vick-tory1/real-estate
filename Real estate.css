@@ -1,0 +1,147 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 4px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: orangered;
+    color: #BFB5A3;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.searches{
+    width: 120px;
+    height: 35px;
+    background-color: #ffffff50;
+    margin-left: 10px;
+    font-size: 13px;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.house-search{
+    display: flex;
+}
+
+.header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.login-btn {
+    background: #BFB5A3;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hero {
+    background: url('hero.jpg') no-repeat center center/cover;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    margin: 5px;
+    border-radius: 50px;
+}
+
+p{
+    text-align: center;
+}
+
+.ex-location{
+    margin: 10px;
+}
+
+.size1{
+    height: 35px;
+    width: 200px;
+}
+
+.size2{
+    height: 35px;
+    width: 100px;
+}
+
+.size3{
+    height: 35px;
+    width: 100px;
+}
+
+
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Make the video stretch to container width */
+    height: 100%; /* Make the video stretch to container height */
+    object-fit: cover; /* Ensures the video covers the entire container */
+    z-index: -1; /* Send the video to the background */
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 600px;
+    height: 270px;
+    border-radius: 20px;
+}
+
+.search-form {
+    margin-top: 20px;
+}
+
+.search-form input, .search-form select, .search-form button {
+    padding: 10px;
+    margin: 5px;
+    border: none;   
+    border-radius: 5px;
+}
+
+.Your-Trusted-Real-Estate-Advisors{
+    width: 100%;
+}
+
+.part0{
+    width: 100%;
+    font-size: 55px;
+    text-align: center;
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
