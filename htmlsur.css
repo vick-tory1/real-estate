@@ -82,6 +82,10 @@ body {
     outline: none;
 }
 
+img {
+    max-width: 100%;
+}
+
 *:not(.slick-track):not(.slick-list) {
     transition: 0.4s;
 }
@@ -932,6 +936,43 @@ footer small a:hover {
 }
 
 @media (max-width: 767px) {
+    #testimonials-slider .testimonials-caption {
+        max-width: 100%;
+    }
+
+    #testimonials-slider .testimonials-caption img {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    #header-hero-container {
+        height: auto;
+        min-height: 0;
+    }
+
+    #hero {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        min-height: 100svh;
+        padding: 100px 16px 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #hero .hero-text {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 100%;
+        max-width: 700px;
+        margin: 0;
+    }
+
     h1 {
         font-size: 2rem;
     }
@@ -954,10 +995,6 @@ footer small a:hover {
 
     .container {
         max-width: 540px;
-    }
-
-    #hero .hero-text {
-        width: 400px;
     }
 
     #agents .card {
@@ -1040,7 +1077,7 @@ footer small a:hover {
 
 @media (max-width: 500px) {
     #hero .hero-text {
-        width: 330px;
+        width: 100%;
     }
 
     #agents {
@@ -1109,7 +1146,7 @@ footer small a:hover {
 
 @media (max-width: 400px) {
   #hero .hero-text {
-     max-width: 275px;
+     max-width: 700px;
      width: 100%;
   }
 
